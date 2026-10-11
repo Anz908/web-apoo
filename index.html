@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111b54">
+<title>ANZ AI Assistant — Liquid Glass</title>
+<style>
+:root{--ink:#eef3ff;--muted:#aab7db;--line:#ffffff26;--glass:#ffffff12;--blue:#5a78ff;--cyan:#66eaff;--bg:#080d24}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 15% 0%,#283c89 0,transparent 42%),radial-gradient(ellipse at 95% 45%,#123c66 0,transparent 40%),linear-gradient(145deg,#080d24,#111938);font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;color:var(--ink)}.wrap{max-width:780px;margin:auto;padding:14px}.glass{background:linear-gradient(145deg,#ffffff20,#ffffff08);backdrop-filter:blur(24px) saturate(145%);-webkit-backdrop-filter:blur(24px) saturate(145%);border:1px solid var(--line);box-shadow:0 16px 50px #0003,inset 0 1px #ffffff15;border-radius:22px}.hero{padding:22px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:210px;height:210px;border:1px solid #ffffff2b;border-radius:50%;right:-75px;top:-100px;box-shadow:0 0 0 22px #ffffff08,0 0 0 48px #ffffff05;pointer-events:none}.eyebrow{font-size:11px;letter-spacing:2.5px;font-weight:900;color:var(--cyan)}h1{font-size:clamp(25px,6vw,36px);line-height:1.1;margin:10px 0}p{color:var(--muted);font-size:13px;line-height:1.6}.pill{display:inline-block;background:#62e7ff1c;border:1px solid #62e7ff55;color:#9cf1ff;padding:6px 10px;border-radius:99px;font-size:10px;font-weight:900}.card{padding:17px;margin-top:13px}.section-title{font-size:15px;font-weight:900;margin:0 0 13px}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:11px}label{font-size:12px;font-weight:800;color:#d5def9}input,textarea,select{width:100%;border:1px solid #ffffff30;background:#080f2c99;color:#f6f8ff;border-radius:12px;padding:12px;font:inherit;font-size:14px;outline:none}input:focus,textarea:focus,select:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #66eaff17}input::placeholder,textarea::placeholder{color:#8291bd}textarea{min-height:100px;resize:vertical}option{background:#101936;color:white}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.btn{border:1px solid #ffffff25;border-radius:12px;padding:12px 15px;font-weight:900;font-size:13px;cursor:pointer;color:white;background:#ffffff12}.btn:active{transform:scale(.98)}.primary{background:linear-gradient(100deg,#425dff,#1ca9e8);border:0;box-shadow:0 7px 22px #365aff3a}.cyan{background:linear-gradient(100deg,#14bcd2,#3c7bff);border:0}.row{display:flex;gap:8px;flex-wrap:wrap}.row .btn{flex:1}.note{padding:11px 12px;border:1px solid #ffda7650;background:#ffcf3510;border-radius:12px;color:#ffe7a3;font-size:12px;line-height:1.5;margin-top:10px}.muted{color:var(--muted);font-size:12px;line-height:1.5}.hidden{display:none!important}.status{font-size:12px;color:#a6f3ff;padding:10px 0;white-space:pre-wrap}.bubble{position:fixed;right:14px;bottom:18px;z-index:5;width:min(320px,calc(100vw - 28px));border-radius:20px;padding:14px;background:linear-gradient(145deg,#192a5eeF,#0e1738ed);border:1px solid #8ceeff77;backdrop-filter:blur(25px);-webkit-backdrop-filter:blur(25px);box-shadow:0 20px 60px #0008}.bubblehead{display:flex;align-items:center;gap:8px;margin-bottom:9px}.orb{width:28px;height:28px;display:grid;place-items:center;border-radius:9px;background:linear-gradient(135deg,#5e7bff,#4be4ef);color:#09142e;font-weight:1000}.bubblehead b{font-size:12px;flex:1}.x{background:#ffffff15;border:0;color:white;border-radius:8px;padding:5px 9px}.bubble textarea{min-height:68px;font-size:12px}.answer{font-size:12px;line-height:1.55;white-space:pre-wrap;max-height:180px;overflow:auto;color:#e5f2ff}.spinner{display:inline-block;width:13px;height:13px;border:2px solid #ffffff40;border-top-color:#9af5ff;border-radius:50%;animation:spin .7s linear infinite;vertical-align:middle}@keyframes spin{to{transform:rotate(360deg)}}.divider{height:1px;background:var(--line);margin:13px 0}.smallbtn{padding:8px 10px;font-size:11px}.resultbox{background:#ffffff0b;border:1px solid #ffffff1c;border-radius:14px;padding:13px;margin-top:12px}.scorebig{font-size:30px;font-weight:1000;color:#91efff}.option{padding:10px;border:1px solid #ffffff24;border-radius:10px;margin:7px 0;display:flex;gap:9px;align-items:flex-start;background:#ffffff08}.option input{width:16px;margin:2px 0 0;accent-color:#66eaff}.question{font-weight:850;font-size:16px;line-height:1.5;white-space:pre-wrap}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero{padding:18px}.card{padding:14px}}
+</style>
+</head>
+<body><div class="wrap">
+<header class="glass hero"><div class="eyebrow">ANZ • SMART LEARNING</div><h1>AI Assistant<br>Liquid Glass</h1><p>Tempat latihan soal, analisis jawaban, pembahasan, dan penilaian dengan tampilan kaca futuristik.</p><span class="pill">GLASS UI • QUIZ • AI CONNECTION READY</span></header>
+<section class="glass card">
+<h2 class="section-title">01 / Pengaturan ujian</h2>
+<div class="grid">
+<div class="field"><label for="student">Nama peserta</label><input id="student" placeholder="Nama kamu"></div>
+<div class="field"><label for="kelas">Kelas</label><input id="kelas" placeholder="Contoh: IX-B"></div>
+<div class="field"><label for="kkm">Nilai KKM</label><input id="kkm" type="number" min="0" max="100" value="75"></div>
+<div class="field"><label for="target">Target nilai</label><select id="target"><option>80</option><option>90</option><option selected>100</option></select></div>
+</div>
+<div class="field"><label for="examUrl">Link ujian (opsional)</label><input id="examUrl" type="url" placeholder="https://alamat-ujian..."></div>
+<div class="row"><button class="btn primary" id="openExam">↗ Buka link di browser</button><button class="btn" id="copyLink">Salin link</button></div>
+<div class="note">HTML ini dapat membuka link, tetapi tidak bisa membaca isi situs ujian lain atau membuat panel mengambang di atas aplikasi Chrome secara otomatis. Panel bantuan di bawah mengambang di halaman HTML ini saja.</div>
+</section>
+<section class="glass card">
+<h2 class="section-title">02 / Hubungkan AI (opsional)</h2>
+<div class="field"><label for="endpoint">Endpoint API AI milikmu</label><input id="endpoint" type="url" placeholder="https://server-kamu.example/api/chat"></div>
+<div class="field"><label for="apiKey">API key (opsional — jangan masukkan kunci rahasia ke halaman publik)</label><input id="apiKey" type="password" placeholder="Isi hanya untuk pengujian lokal"></div>
+<div class="field"><label for="model">Nama model (opsional)</label><input id="model" placeholder="Contoh: nama-model-dari-provider"></div>
+<div class="muted">Agar AI sungguhan menjawab, perlu endpoint yang mendukung permintaan browser/CORS dan format API yang sesuai. Tanpa konfigurasi ini, tombol AI hanya memberi petunjuk lokal—tidak berpura-pura tersambung.</div>
+<div class="row" style="margin-top:12px"><button class="btn cyan" id="testAI">Uji koneksi AI</button><button class="btn" id="clearKey">Hapus kunci dari kolom</button></div><div id="aiStatus" class="status">AI belum dikonfigurasi.</div>
+</section>
+<section class="glass card">
+<h2 class="section-title">03 / Latihan soal</h2>
+<div class="field"><label for="questionInput">Tempel soal</label><textarea id="questionInput" placeholder="Tempel teks soal di sini, termasuk pilihan A/B/C/D jika ada."></textarea></div>
+<div class="field"><label for="contextInput">Materi / catatan (opsional)</label><textarea id="contextInput" placeholder="Tambahkan materi agar jawaban dapat dianalisis berdasarkan sumber yang kamu punya."></textarea></div>
+<div class="row"><button class="btn primary" id="askAI">✦ Analisis dengan AI</button><button class="btn" id="clearQ">Bersihkan</button></div>
+<div class="resultbox hidden" id="aiResult"><div class="section-title">Hasil analisis</div><div id="aiAnswer" class="answer"></div></div>
+<div class="note">Gunakan untuk latihan dan memahami materi. AI bisa keliru; cek jawaban dengan buku atau sumber tepercaya. Target 100 adalah sasaran, bukan jaminan nilai.</div>
+</section>
+<section class="glass card">
+<h2 class="section-title">04 / Kuis lokal & nilai otomatis</h2>
+<p>Contoh kuis HTML/CSS untuk mencoba timer, pilihan jawaban, KKM, dan skor. Ini terpisah dari situs ujian eksternal.</p>
+<div class="row"><button class="btn primary" id="startQuiz">Mulai contoh kuis</button><button class="btn" id="resetQuiz">Reset</button></div>
+<div id="quizArea" class="hidden resultbox"><div class="muted" id="qCount"></div><div class="question" id="qText"></div><div id="qOptions"></div><div class="row"><button class="btn" id="qPrev">Sebelumnya</button><button class="btn primary" id="qNext">Berikutnya</button><button class="btn cyan hidden" id="qFinish">Nilai kuis</button></div></div>
+<div id="quizResult" class="resultbox hidden"></div>
+</section>
+<footer class="muted" style="text-align:center;padding:20px">ANZ AI Assistant • Berjalan di browser • API eksternal tidak disertakan</footer>
+</div>
+<div class="bubble" id="floatingPanel"><div class="bubblehead"><div class="orb">A</div><b>ANZ AI • PANEL MENGAMBANG</b><button class="x" id="minPanel" aria-label="Kecilkan panel">−</button></div><div id="panelBody"><div class="muted" style="margin-bottom:8px">Panel ini mengambang di halaman ini, bukan di atas aplikasi lain.</div><textarea id="quickQuestion" placeholder="Tulis atau tempel soal latihan singkat..."></textarea><div class="row" style="margin-top:8px"><button class="btn cyan smallbtn" id="quickAsk">Analisis soal</button><button class="btn smallbtn" id="sendToMain">Kirim ke form</button></div><div id="quickAnswer" class="answer" style="margin-top:8px"></div></div></div>
+<script>
+const $=id=>document.getElementById(id);
+let aiConnected=false, questions=[], answers=[], qi=0;
+function validUrl(raw){try{const u=new URL(raw);return ["http:","https:"].includes(u.protocol)?u.href:null}catch{return null}}
+$("openExam").onclick=()=>{let u=validUrl($("examUrl").value.trim());if(!u){alert("Masukkan link lengkap yang diawali http:// atau https://");return}window.open(u,"_blank","noopener");};
+$("copyLink").onclick=async()=>{let t=$("examUrl").value.trim();if(!t){alert("Masukkan link terlebih dahulu.");return}try{await navigator.clipboard.writeText(t);alert("Link disalin.")}catch{prompt("Salin link ini:",t)}};
+$("clearKey").onclick=()=>{$("apiKey").value="";$("aiStatus").textContent="Kolom API key dikosongkan."};
+async function callAI(promptText){
+ const endpoint=$("endpoint").value.trim(),key=$("apiKey").value.trim(),model=$("model").value.trim();
+ if(!endpoint)return {error:"AI belum terhubung. Masukkan endpoint API AI yang kamu miliki terlebih dahulu. HTML statis tidak memiliki model AI bawaan."};
+ const url=validUrl(endpoint);if(!url)return {error:"Endpoint harus berupa URL http/https yang valid."};
+ const headers={"Content-Type":"application/json"};if(key)headers.Authorization="Bearer "+key;
+ const body={model:model||undefined,messages:[{role:"system",content:"Kamu asisten belajar berbahasa Indonesia. Analisis soal latihan secara teliti, tunjukkan alasan dan tingkat keyakinan. Jika informasi tidak cukup, katakan demikian. Jangan mengklaim kepastian 100%."},{role:"user",content:promptText}]};
+ try{let res=await fetch(url,{method:"POST",headers,body:JSON.stringify(body)});if(!res.ok)return {error:"Endpoint merespons HTTP "+res.status+". Periksa endpoint, autentikasi, format API, dan CORS."};let data=await res.json();let answer=data.choices?.[0]?.message?.content??data.output_text??data.answer??JSON.stringify(data,null,2);return {answer:String(answer)}}
+ catch(e){return {error:"Koneksi gagal: "+e.message+". Periksa internet, CORS, dan apakah endpoint mendukung format chat-completions."}}
+}
+$("testAI").onclick=async()=>{$("aiStatus").innerHTML='<span class="spinner"></span> Menguji koneksi...';let r=await callAI("Balas singkat: Koneksi AI berhasil.");$("aiStatus").textContent=r.error||"Respons endpoint: "+r.answer;aiConnected=!r.error};
+async function ask(inputId,outputId,resultId){
+ let q=$(inputId).value.trim();if(!q){$(outputId).textContent="Tempel soal terlebih dahulu.";if(resultId)$(resultId).classList.remove("hidden");return}
+ let context=$("contextInput").value.trim();$(outputId).textContent="Menganalisis...";if(resultId)$(resultId).classList.remove("hidden");
+ let r=await callAI("Analisis soal latihan berikut.\nSOAL:\n"+q+"\nMATERI REFERENSI:\n"+context+"\nBerikan jawaban paling didukung bukti, alasan singkat, dan hal yang perlu diverifikasi.");
+ $(outputId).textContent=r.error||r.answer;
+}
+$("askAI").onclick=()=>ask("questionInput","aiAnswer","aiResult");
+$("quickAsk").onclick=()=>ask("quickQuestion","quickAnswer",null);
+$("sendToMain").onclick=()=>{$("questionInput").value=$("quickQuestion").value;$("questionInput").focus()};
+$("clearQ").onclick=()=>{$("questionInput").value="";$("contextInput").value="";$("aiAnswer").textContent="";$("aiResult").classList.add("hidden")};
+$("minPanel").onclick=()=>{let b=$("panelBody");let hidden=b.classList.toggle("hidden");$("minPanel").textContent=hidden?"+":"−"};
+const sample=[
+{q:"Tag HTML yang digunakan untuk membuat tautan adalah ...",o:["<link>","<a>","<href>","<url>"],a:1,e:"Elemen <a> membuat hyperlink; atribut href menyimpan tujuan."},
+{q:"Kepanjangan CSS adalah ...",o:["Computer Style System","Creative Sheet Syntax","Cascading Style Sheets","Colorful Style Source"],a:2,e:"CSS berarti Cascading Style Sheets."},
+{q:"Bahasa yang umum digunakan untuk interaksi pada halaman web adalah ...",o:["JavaScript","SQL","PNG","DNS"],a:0,e:"JavaScript menjalankan logika interaktif di browser."},
+{q:"Atribut untuk alamat tujuan tautan adalah ...",o:["src","alt","href","class"],a:2,e:"Atribut href memuat URL tujuan."},
+{q:"Properti CSS untuk mengatur warna teks adalah ...",o:["font-style","background","text-color","color"],a:3,e:"Properti color mengatur warna teks."}
+];
+$("startQuiz").onclick=()=>{questions=sample;answers=Array(questions.length).fill(null);qi=0;$("quizResult").classList.add("hidden");$("quizArea").classList.remove("hidden");renderQ()};
+$("resetQuiz").onclick=()=>{$("quizArea").classList.add("hidden");$("quizResult").classList.add("hidden");questions=[];answers=[]};
+function renderQ(){let q=questions[qi];$("qCount").textContent="Soal "+(qi+1)+" / "+questions.length;$("qText").textContent=q.q;$("qOptions").innerHTML="";q.o.forEach((t,i)=>{let l=document.createElement("label");l.className="option";let inp=document.createElement("input");inp.type="radio";inp.name="opt";inp.checked=answers[qi]===i;inp.onchange=()=>answers[qi]=i;let s=document.createElement("span");s.textContent=String.fromCharCode(65+i)+". "+t;l.append(inp,s);$("qOptions").append(l)});$("qPrev").disabled=qi===0;$("qNext").classList.toggle("hidden",qi===questions.length-1);$("qFinish").classList.toggle("hidden",qi!==questions.length-1)}
+$("qPrev").onclick=()=>{if(qi>0){qi--;renderQ()}};$("qNext").onclick=()=>{if(qi<questions.length-1){qi++;renderQ()}};
+$("qFinish").onclick=()=>{let right=questions.filter((q,i)=>answers[i]===q.a).length,score=Math.round(100*right/questions.length),kkm=Math.max(0,Math.min(100,Number($("kkm").value)||0));$("quizResult").classList.remove("hidden");$("quizResult").innerHTML="";let n=document.createElement("div");n.className="scorebig";n.textContent="Nilai: "+score;let s=document.createElement("div");s.textContent="Jawaban benar "+right+"/"+questions.length+" • "+(score>=kkm?"Mencapai KKM "+kkm:"Belum mencapai KKM "+kkm);$("quizResult").append(n,s);questions.forEach((q,i)=>{let d=document.createElement("div");d.className="divider";let p=document.createElement("p");p.textContent=(i+1)+". "+q.q+" — Kunci: "+String.fromCharCode(65+q.a)+". "+q.o[q.a]+". "+q.e;d.append(p);$("quizResult").append(d)})};
+</script></body></html>
